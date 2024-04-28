@@ -19,6 +19,7 @@ export default defineNuxtConfig({
         }
       }
     ],
+    'nuxt-helm',
     'nuxt-icon',
     '@pinia/nuxt',
     [
