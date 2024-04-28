@@ -5,8 +5,8 @@ export default defineNuxtConfig({
     buildAssetsDir: 'assets' // don't use "_" at the begining of the folder name to avoids nojkill conflict
   },
   routeRules: {
-    '/web/v1/**': {
-        proxy: { to: "https://rdowafun.github.io/", },
+    '/v1/account': {
+        proxy: { to: "https://cloud.appwrite.io/v1/account", },
     }
   },
   modules: [
