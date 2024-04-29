@@ -22,10 +22,10 @@ onMounted(async () => {
   }
 });
 
-const login = async ({req, res, error, log}) => {
-  req.headers = {"Access-Control-Allow-Origin": "*"}
+const login = async () => {
+  const headers = {"Access-Control-Allow-Origin": "*"}
   isLoadingStore.set(true);
-  await account.createEmailPasswordSession(emailRef.value, passwordRef.value);
+  await account.createEmailPasswordSession(emailRef.value, passwordRef.value, headers);
   const response = await account.get();
   if (response) {
     authStore.set({
@@ -43,11 +43,13 @@ const login = async ({req, res, error, log}) => {
   isLoadingStore.set(false);
 };
 const register = async () => {
+  const headers = {"Access-Control-Allow-Origin": "*"}
   await account.create(
     uuid(),
     emailRef.value,
     passwordRef.value,
-    nameRef.value
+    nameRef.value,
+    headers
   );
   await login();
 };
