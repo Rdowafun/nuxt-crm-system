@@ -22,7 +22,8 @@ onMounted(async () => {
   }
 });
 
-const login = async () => {
+const login = async ({req, res, error, log}) => {
+  req.headers = {"Access-Control-Allow-Origin": "*"}
   isLoadingStore.set(true);
   await account.createEmailPasswordSession(emailRef.value, passwordRef.value);
   const response = await account.get();

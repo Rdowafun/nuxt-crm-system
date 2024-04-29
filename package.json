@@ -21,7 +21,6 @@
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
     "nuxt": "^3.11.2",
-    "nuxt-helm": "^0.0.2",
     "pinia": "^2.1.7",
     "radix-vue": "^1.7.0",
     "tailwind-merge": "^2.2.2",
