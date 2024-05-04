@@ -31,7 +31,7 @@ const login = async () => {
     authStore.set({
       email: response.email,
       name: response.name,
-      status: response.status,
+      status: response.status
     });
   }
 
