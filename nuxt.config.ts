@@ -2,11 +2,14 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
     baseURL: '/nuxt-crm-system/', // baseURL: '/<repository>/'
-    buildAssetsDir: 'assets' // don't use "_" at the begining of the folder name to avoids nojkill conflict
+    buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/nuxt-crm-system/favicon.ico' }]
+    }
   },
   routeRules: {
     '/v1/account': {
-        proxy: { to: "https://cloud.appwrite.io/v1/account", },
+      proxy: { to: 'https://cloud.appwrite.io/v1/account' }
     }
   },
   modules: [
