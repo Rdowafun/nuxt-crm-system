@@ -1,10 +1,19 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  experimental: {
+    payloadExtraction: false
+  },
   app: {
     baseURL: '/nuxt-crm-system/', // baseURL: '/<repository>/'
-    buildAssetsDir: 'assets', 
+    buildAssetsDir: 'assets',
     head: {
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/nuxt-crm-system/favicon.ico' }]
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/nuxt-crm-system/favicon.ico'
+        }
+      ]
     }
   },
   routeRules: {
