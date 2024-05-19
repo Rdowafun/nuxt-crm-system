@@ -16,11 +16,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-  routeRules: {
-    '/v1/account': {
-      proxy: { to: 'https://cloud.appwrite.io/v1/account' }
-    }
-  },
   modules: [
     '@nuxt/ui',
     '@nuxt/image',

@@ -47,6 +47,7 @@ const { mutate, isPending } = useMutation({
 })
 
 const onSubmit = handleSubmit(values => {
+	values.price = parseInt(values.price as unknown as string)
 	mutate(values)
 })
 </script>
