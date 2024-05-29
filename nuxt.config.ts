@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  image: {
+    provider: process.env.VERCEL_ENV ? 'vercel' : 'ipx'
+  },
   modules: [
     '@nuxt/ui',
     '@nuxt/image',
