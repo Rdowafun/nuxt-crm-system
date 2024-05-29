@@ -72,7 +72,7 @@ const onSubmit = handleSubmit(values => {
 				v-model="name"
 				v-bind="nameAttrs"
 				type="text"
-				class="input"
+				class="input mb-4"
 			/>
 
 			<UiInput
@@ -80,14 +80,14 @@ const onSubmit = handleSubmit(values => {
 				v-model="email"
 				v-bind="emailAttrs"
 				type="text"
-				class="input"
+				class="input mb-4"
 			/>
 			<UiInput
 				placeholder="Откуда пришел?"
 				v-model="fromSource"
 				v-bind="fromSourceAttrs"
 				type="text"
-				class="input"
+				class="input mb-4"
 			/>
 
 			<img
