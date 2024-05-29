@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: '/nuxt-crm-system/', // baseURL: '/<repository>/'
-    buildAssetsDir: 'assets',
+    buildAssetsDir: '/nuxt-crm-system/_nuxt/', // Ensures assets are placed in the correct directory
     head: {
       link: [
         {
