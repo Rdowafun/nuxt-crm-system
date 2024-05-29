@@ -4,8 +4,8 @@ export default defineNuxtConfig({
     payloadExtraction: false
   },
   app: {
-    baseURL: '/nuxt-crm-system/', // Base URL for GitHub Pages
-    buildAssetsDir: '/nuxt-crm-system/_nuxt/', // Ensures assets are placed in the correct directory
+    baseURL: '/nuxt-crm-system/', // baseURL: '/<repository>/'
+    buildAssetsDir: 'assets',
     head: {
       link: [
         {
@@ -15,9 +15,6 @@ export default defineNuxtConfig({
         }
       ]
     }
-  },
-  image: {
-    provider: process.env.VERCEL_ENV ? 'vercel' : 'ipx'
   },
   modules: [
     '@nuxt/ui',
@@ -50,4 +47,4 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./store/**']
   }
-});
+})
