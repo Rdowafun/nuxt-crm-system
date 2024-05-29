@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     payloadExtraction: false
   },
   app: {
-    baseURL: '/nuxt-crm-system/', // baseURL: '/<repository>/'
+    baseURL: '/nuxt-crm-system/', // Base URL for GitHub Pages
     buildAssetsDir: '/nuxt-crm-system/_nuxt/', // Ensures assets are placed in the correct directory
     head: {
       link: [
@@ -50,4 +50,4 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./store/**']
   }
-})
+});
